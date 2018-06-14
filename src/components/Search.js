@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { startSearchRecipesAction } from '../actions/recipes'
 
 class Search extends React.Component {
-
   state = {
     searchTerm: ''
   }
@@ -17,19 +16,24 @@ class Search extends React.Component {
     e.preventDefault()
 
     this.props.searchRecipes(this.state.searchTerm)
+
+    this.setState(() => ({ searchTerm: '' }))
   }
 
-  render() {
+  render () {
     return (
-      <form onSubmit={this.onSearchSubmit}>
+      <form className='search' onSubmit={this.onSearchSubmit}>
         <input
-          type="text"
-          placeholder="Type the food here"
+          className='search__input'
+          type='text'
+          placeholder='Search for some amazing recipes'
           value={this.state.searchTerm}
           onChange={this.onSearchTermChange}
         />
-        <button>
-          Search
+        <button className='search__button'>
+          <svg className='search__icon'>
+            <use xlinkHref='images/sprite.svg#icon-search2'/>
+          </svg>
         </button>
       </form>
     )

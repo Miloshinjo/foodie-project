@@ -1,12 +1,23 @@
 .header {
   display: flex;
   align-items: center;
-
-  //test
-  background-color: orangered;
+  justify-content: space-between;
+  background-color: $clean;
+  padding: 2rem;
+  height: 12rem;
 }
 
+.header__logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header__logo {
-  width: 25rem;
-  height: 100%;
+  width: 15rem;
+  height: 7rem;
+  fill: $dark-grey;
+}
+
+.header__title {
+  font-weight: 500;
 }

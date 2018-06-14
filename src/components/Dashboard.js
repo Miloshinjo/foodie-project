@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Recipes from './Recipes'
 
 export const Dashboard = () => (
   <div>
     <div>
-      Search our database of over milion recipes
+      <Recipes />
     </div>
   </div>
 )

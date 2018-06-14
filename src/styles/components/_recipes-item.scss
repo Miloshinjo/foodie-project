@@ -1,0 +1,14 @@
+.recipes-item {
+  border: 1px solid black;
+}
+
+.recipes-item__img-box {
+  height: auto;
+  width: 15rem;
+}
+
+.recipes-item__img {
+  object-fit: cover;
+  height: 25rem;
+  width: 25rem;
+}

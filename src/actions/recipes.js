@@ -10,9 +10,8 @@ export const SearchRecipesAction = (recipes) => ({
 // ASYNC ACTION (used with redux-thunk)
 export const startSearchRecipesAction = (query) => {
   return (dispatch) => {
-
     return searchRecipes(query).then((recipes) => {
-        dispatch(SearchRecipesAction(recipes))
+      dispatch(SearchRecipesAction(recipes))
     })
   }
 }
