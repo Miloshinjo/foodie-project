@@ -6,7 +6,12 @@ const RecipesItem = (props) => (
       <img src={props.imgUrl} className='recipes-item__img' />
     </div>
     <h2 className='recipes-item__title'>{props.title}</h2>
-    <h3 className='recipes-item__publisher'>From: <a className='recipes-item__src-link' href={props.srcUrl} target='_blank'>{props.publisher}</a></h3>
+
+    <h3 className='recipes-item__publisher'>
+      by <a className='recipes-item__publisher--link' href={props.publisherUrl} target='_blank'>
+      {props.publisher}
+    </a>
+    </h3>
   </li>
 )
 

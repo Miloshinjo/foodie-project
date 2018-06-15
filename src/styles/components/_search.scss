@@ -7,22 +7,22 @@
 
 .search__input {
   outline: none;
-  background-color: $off-white;
+  background-color: $beige;
   border: none;
   padding: .5rem;
   border-bottom: 2px solid transparent;
   border-top: 2px solid transparent;
   transition: all .3s;
-  width: 50rem;
+  width: 40rem;
 
   &:focus,
   &:focus + .search__button {
-    border-bottom: 2px solid $butter;
+    border-bottom: 2px solid $yellow;
   }
 }
 
 .search__button {
-  background-color: $butter;
+  background-color: $light-grey;
   border: none;
   outline: none;
   padding: .5rem 1rem;
@@ -31,7 +31,7 @@
   transition: all .3s;
 
   &:hover {
-    background-color: darken($butter, 10);
+    background-color: darken($light-grey, 10);
   }
 }
 
@@ -39,5 +39,5 @@
   margin: 0;
   width: 2.25rem;
   height: 2.25rem;
-  fill: $dark-grey;
+  fill: $dark;
 }

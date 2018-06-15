@@ -127,12 +127,13 @@ const dummyRecipes = [
 
 const Recipes = ({ recipes }) => (
   <ul className='recipes'>
-    {dummyRecipes.map((recipe) => (
+    {recipes.map((recipe) => (
       <RecipesItem
         key={recipe.recipe_id}
         title={recipe.title}
         imgUrl={recipe.image_url}
         publisher={recipe.publisher}
+        publisherUrl={recipe.publisher_url}
         srcUrl={recipe.source_url}
       />
     ))}

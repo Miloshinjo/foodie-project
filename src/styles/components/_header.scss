@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $clean;
+  background-color: $dark;
   padding: 2rem;
   height: 12rem;
 }
@@ -15,9 +15,10 @@
 .header__logo {
   width: 15rem;
   height: 7rem;
-  fill: $dark-grey;
+  fill: $off-white;
 }
 
 .header__title {
-  font-weight: 500;
+  font-weight: 300;
+  color: $off-white;
 }
