@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import RecipesItem from './RecipesItem'
+import LoadingPage from './LoadingPage'
 
 const dummyRecipes = [
   {
@@ -125,20 +126,28 @@ const dummyRecipes = [
   }
 ]
 
-const Recipes = ({ recipes }) => (
-  <ul className='recipes'>
-    {recipes.map((recipe) => (
-      <RecipesItem
-        key={recipe.recipe_id}
-        title={recipe.title}
-        imgUrl={recipe.image_url}
-        publisher={recipe.publisher}
-        publisherUrl={recipe.publisher_url}
-        srcUrl={recipe.source_url}
-      />
-    ))}
+const Recipes = ({ recipes }) => {
+  if (recipes) {
+    return (
+      <ul className='recipes'>
+      {recipes.map((recipe) => (
+        <RecipesItem
+          key={recipe.recipe_id}
+          id={recipe.recipe_id}
+          title={recipe.title}
+          imgUrl={recipe.image_url}
+          publisher={recipe.publisher}
+          publisherUrl={recipe.publisher_url}
+          srcUrl={recipe.source_url}
+            />
+      ))}
   </ul>
-)
+    )
+  } else {
+    return <LoadingPage />
+  }
+
+}
 
 const mapStateToProps = (state) => {
   return {

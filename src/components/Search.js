@@ -18,6 +18,7 @@ class Search extends React.Component {
     this.props.searchRecipes(this.state.searchTerm)
 
     this.setState(() => ({ searchTerm: '' }))
+
   }
 
   render () {
