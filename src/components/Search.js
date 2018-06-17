@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { startSearchRecipesAction } from '../actions/recipes'
 
@@ -14,6 +15,8 @@ class Search extends React.Component {
 
   onSearchSubmit = (e) => {
     e.preventDefault()
+
+    this.props.history.push('/recipes')
 
     this.props.searchRecipes(this.state.searchTerm)
 
@@ -33,7 +36,7 @@ class Search extends React.Component {
         />
         <button className='search__button'>
           <svg className='search__icon'>
-            <use xlinkHref='images/sprite.svg#icon-search2'/>
+            <use xlinkHref='/images/sprite.svg#icon-search2'/>
           </svg>
         </button>
       </form>
@@ -45,4 +48,4 @@ const mapDispatchToProps = (dispatch) => ({
   searchRecipes: (query) => dispatch(startSearchRecipesAction(query))
 })
 
-export default connect(undefined, mapDispatchToProps)(Search)
+export default connect(undefined, mapDispatchToProps)(withRouter(Search))

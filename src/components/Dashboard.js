@@ -1,10 +1,10 @@
 import React from 'react'
-import Recipes from './Recipes'
+import Search from './Search'
 
 export const Dashboard = () => (
   <div>
     <div>
-      <Recipes />
+      <Search />
     </div>
   </div>
 )

@@ -127,7 +127,7 @@ const dummyRecipes = [
 ]
 
 const Recipes = ({ recipes }) => {
-  if (recipes) {
+  if (recipes.length > 0) {
     return (
       <ul className='recipes'>
       {recipes.map((recipe) => (
